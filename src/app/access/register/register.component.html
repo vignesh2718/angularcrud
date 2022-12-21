@@ -1,1 +1,38 @@
-<h3>This is Register Page!!!</h3>
+<mat-card>
+  <mat-card-title>User Registeration</mat-card-title>
+ <mat-card-content>
+  <form class="example-form" [formGroup]="reactiveform" (ngSubmit)="SaveUser()">
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>UserID</mat-label>
+          <input matInput placeholder="ID" formControlName="userid" >
+        </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="name"  >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password"  type="password" formControlName="password"   >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill"  >
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <div style="margin: 20px">
+          <h3>
+            <button mat-raised-button type="submit" color="primary">Register</button>
+            <br>
+            <br>
+           Already have account?
+            <a mat-button routerLink="register" (click)="RedirectLogin()" style="margin-left: 5px"
+              >Login</a
+            >
+          </h3>
+        </div>
+    </form>
+
+ </mat-card-content>
+
+</mat-card>

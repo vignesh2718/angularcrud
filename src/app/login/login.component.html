@@ -1,1 +1,45 @@
-<h3>This is login Page!!</h3>
+<!-- <h3>User Login</h3> -->
+<mat-card>
+  <mat-card-title>LOGIN</mat-card-title>
+
+  <mat-card-content>
+    <form
+      class="example-form"
+      #loginform="ngForm"
+      (submit)="ProceedLogin(loginform)"
+    >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>UserName</mat-label>
+        <input
+          matInput
+          placeholder="Enter your Name"
+          name="username"
+          required
+          ngModel
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Enter your password"
+          type="password"
+          name="password"
+          required
+          ngModel
+        />
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Login</button>
+
+      <div style="margin: 20px">
+        <h3>
+          don't have account?
+          <a mat-button routerLink="register" (click)="RedirectRegister()" style="margin-left: 5px"
+            >Register</a
+          >
+        </h3>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,14 @@
+mat-card-title{
+  padding: 10px;
+  margin: 15px;
+}
+.ng-star-inserted{
+  width: 80%;
+}
+
+
+button{
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+}

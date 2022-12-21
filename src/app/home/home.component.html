@@ -1,1 +1,16 @@
-<h3>Welcome to Home Page!!</h3>
+<h3 [ngStyle]="stylevalue">{{headername | uppercase}}</h3>
+<h3 [ngClass]="classname">{{birthday | date}}</h3>
+<!-- Event binding -->
+<button (click)="Functionclick('hello')">Click me</button>
+<br>
+<input  #txt (change)="Functionclick(txt.value)">
+<br>
+<!-- Property Binding -->
+<input [disabled]="isdisabled" #txt (change)="Functionclick(txt.value)">
+<br>
+<br>
+
+<ul>
+  <li *ngFor="let item of colors ">{{item}}</li>
+</ul>
+

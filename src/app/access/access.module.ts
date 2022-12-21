@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from 'src/material-model';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AccessRoutingModule } from './access-routing.module';
 import { RegisterComponent } from './register/register.component';
@@ -11,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     CommonModule,
-    AccessRoutingModule
+    AccessRoutingModule,MaterialModule, FormsModule, ReactiveFormsModule
   ]
 })
 export class AccessModule { }
