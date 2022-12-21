@@ -1,6 +1,6 @@
 import { Component , DoCheck} from '@angular/core';
 import { Router } from '@angular/router';
-
+import { UserService } from './Service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements DoCheck{
-  constructor(private route:Router){}
+
+  constructor(private route:Router, private service:UserService){}
   title = 'angularcrud';
   isMenuVisible = true;
+  isadmin=false;
+
   ngDoCheck(): void {
     const currentroute = this.route.url;
-    if(currentroute=='/login'){
+    if(currentroute=='/login' || currentroute == '/access/register'){
     this.isMenuVisible=false
   }else{
     this.isMenuVisible=true;
   }
+  // if (this.service.GetRole() == 'admin') {
+  //   this.isadmin = true;
+  // }else{
+  //   this.isadmin = false;
+  // }
 }
 }
 
